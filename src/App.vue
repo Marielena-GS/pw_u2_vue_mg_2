@@ -1,20 +1,30 @@
 <template>
   <div>
-    <ContadorView /> 
+  </div>
+  <div>
+      <!--<ContadorView/> -->
+      <!--Nuevo--><DirectivasView/>
+  </div>
+  <div>
+
   </div>
 </template>
 
-<script>
+<script >
+import ContadorView from './views/ContadorView.vue';
+import DirectivasView from './views/DirectivasView.vue'; //nuevo
+export default{
+    components: {
+        ContadorView,
+        DirectivasView //nuevo
+    }
+  }
 
-import ContadorView from '../src/views/ContadorView.vue'
 
-export default {
-  components: {
-    ContadorView
-  },
-};
+
 
 </script>
 
 <style>
+
 </style>
