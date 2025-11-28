@@ -1,13 +1,11 @@
 <template>
+  <div></div>
   <div>
-  </div>
-  <div>
+    <ContadorView/>
       <!--<ContadorView/> -->
-      <!--Nuevo--><DirectivasView/>
+    <DirectivasView/>
   </div>
-  <div>
-
-  </div>
+ 
 </template>
 
 <script >
@@ -16,15 +14,10 @@ import DirectivasView from './views/DirectivasView.vue'; //nuevo
 export default{
     components: {
         ContadorView,
-        DirectivasView //nuevo
+        ContadorView,
+        DirectivasView
     }
   }
 
-
-
-
 </script>
-
-<style>
-
-</style>
+<style></style>

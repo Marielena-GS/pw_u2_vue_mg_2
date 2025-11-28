@@ -2,8 +2,7 @@
   <div>
     <h1>{{ tit }}</h1>
     <p>{{ numero }}<sup>2</sup>={{ calcularCuadrado }}</p>
-    <p>{{ numero }}<sup>2</sup>={{ calcularCuadrado }}</p>
-    <p>{{ numero }}<sup>2</sup>={{ calcularCuadrado }}</p>
+    <p>{{ numero }}<sup>2</sup>={{ obtenerCuadrado()}}</p>
     <p>{{ numero }}<sup>2</sup>={{ calcularCubo }}</p>
     <p>{{ numero }}<sup>2</sup>={{ obtenerCubo() }}</p>
     <div>
@@ -34,10 +33,10 @@ export default {
     },
     incrementar() {
       console.log(this.tit);
-      this.numero++;
+      this.numero ++;
     },
     decrementar() {
-      this.numero--;
+      this.numero --;
     },
   }, //propiedades computadas no son metodos, se ejecutan solo cuando existe un cambio en la respuesta caso contrario se guarda las respuestas en cache
   computed: {
@@ -49,20 +48,19 @@ export default {
       return this.numero * this.numero * this.numero;
     },
   },
- /* props: ["tit", "inicio", "mostrar"], declaracion basica de props*/
- props: {
-  tit : String,
-  inicio : {
-    type: Number,
-    default: 99,
-    validator(value){//validaciones
-      return value>10;
-    }
-  },
-  mostrar: Boolean
- }/*Sting, Number, Boolean, Array, Object, Date, Funcion, BigInt */
+  /* props: ["tit", "inicio", "mostrar"], declaracion basica de props*/
+  props: {
+    tit: String,
+    inicio: {
+      type: Number,
+      default: 99,
+      validator(value) {//validaciones
+        return value > 10;
+      }
+    },
+    mostrar: Boolean
+  }/*Sting, Number, Boolean, Array, Object, Date, Funcion, BigInt */
 };
 </script>
 
-<style>
-</style>
+<style></style>
