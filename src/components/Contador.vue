@@ -5,6 +5,7 @@
     <p>{{ numero }}<sup>2</sup>={{ obtenerCuadrado()}}</p>
     <p>{{ numero }}<sup>2</sup>={{ calcularCubo }}</p>
     <p>{{ numero }}<sup>2</sup>={{ obtenerCubo() }}</p>
+
     <div>
       <button @:click="incrementar()">+1</button>
       <button @:click="decrementar()">-1</button>
