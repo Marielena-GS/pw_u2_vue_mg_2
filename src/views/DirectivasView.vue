@@ -27,4 +27,5 @@ export default {
 h2 {
   font-size: 50px;
 }
+
 </style>
