@@ -8,4 +8,5 @@ const consumirAPI = async () => {
 
 export async function consumirAPIFacade(){
     return await consumirAPI();
+    // prueba
 }
