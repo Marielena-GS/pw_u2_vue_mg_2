@@ -40,8 +40,9 @@ li {
   cursor: pointer;
   width: 250px;
   margin-top: 10px;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 .opciones-container {
