@@ -88,7 +88,7 @@ p{
 h2{
     margin-top: 150px;
 }
-body{
+/*body{
   background-color: black;
-}
+}*/
 </style>

@@ -1,35 +1,51 @@
 <template>
-    <div class="opciones-container">
-        <ul>
-            <li>Pokemon 1</li>
-            <li>Pokemon 2</li>
-            <li>Pokemon 3</li>
-            <li>Pokemon 4</li>
-        </ul>
-    </div>
+  <div class="opciones-container">
+    <ul>
+      <li
+        v-on:click="pasarPadre(pokemon.id)"
+        v-for="pokemon in listaPokemons"
+        :key="pokemon.id"
+      >
+        {{ pokemon.nombre }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+  props: {
+    listaPokemons: {
+      type: Array,
+      required: true,
+    },
+  },
+  methods: {
+    pasarPadre(id) {
+      console.log(id);
+      this.$emit('seleccionado',id);
+    },
+  },
+};
 </script>
 
 <style>
-    ul {
-        list-style-type: none;
-    }
-    li {
-        background-color: white;
-        border-radius: 5px;
-        border: 1px solid;
-        cursor: pointer;
-        width: 250px;
-        margin-top: 10px;
-    }
+ul {
+  list-style-type: none;
+}
+li {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid;
+  cursor: pointer;
+  width: 250px;
+  margin-top: 10px;
+  justify-items: center;
+  align-items: center;
+}
 
-    .opciones-container {
-        display: flex;
-        justify-content: center;
-    }
+.opciones-container {
+  display: flex;
+  justify-content: center;
+}
 </style>

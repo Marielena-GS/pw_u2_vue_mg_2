@@ -49,3 +49,12 @@ function obtenerAleatorio(min,max){
 
     return [obj1,obj2,obj3,obj4];
  }
+
+ export async function  obtenerVectorPokemonFacade() {
+    const vectorPokemon = obtenerVectorNumerico();
+    return await obtenerVectorPokemon(vectorPokemon);
+ }
+
+ export function obtenerAleatorioFachada(min,max){
+    return obtenerAleatorio(min,max);
+}
